@@ -69,7 +69,7 @@ export const s = StyleSheet.create({
   },
   addTaskContainer: {
     backgroundColor: "#e0e1dd",
-    paddingVertical: 20,
+    paddingVertical: 2,
     alignItems: "center", // Centers button horizontally
   },
 
@@ -78,5 +78,23 @@ export const s = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+  },
+
+  //task card
+  taskCard: {
+    backgroundColor: "#ffffff",
+    padding: 15,
+    borderRadius: 10,
+    marginVertical: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 5,
+  },
+
+  taskText: {
+    fontSize: 16,
+    color: "#333",
   },
 });
