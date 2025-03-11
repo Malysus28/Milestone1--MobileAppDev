@@ -1,5 +1,4 @@
-import { Text, View } from "react-native";
-import { Profile } from "./components/Profile/Profile";
+import { Text, View, Image } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { s } from "./style";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
@@ -8,9 +7,30 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
-        <View style={s.container}>
-          <Text>Hello</Text>
-          <Text>Lets make a ToDo list to keep track.</Text>
+        //make a splash screen and save it in assets with splash.png //Header
+        <View style={s.header}>
+          <Image
+            style={s.headerImg}
+            source={require("./assets/to-do-list.png")}
+          ></Image>
+          <Text style={s.headerText}>My ToDo List</Text>
+        </View>
+        //Body
+        <View style={s.body}>
+          <Text>Body</Text>
+        </View>
+        //Add Task Button
+        <View style={s.addTaskContainer}>
+          <TouchableOpacity
+            style={s.addTaskButton}
+            onPress={() => alert("Add Task Clicked")}
+          >
+            <Text style={s.addTaskButtonText}>Add Task</Text>
+          </TouchableOpacity>
+        </View>
+        //Footer
+        <View style={s.footer}>
+          <Text>Footer</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
